@@ -21,7 +21,7 @@ jobs:
         uses: whoan/docker-build-with-cache-action@v5
         with:
           image_name: gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.SERVICE_NAME }}
-          push_image_and_stages: false
+          push_image_and_stages: true
       - name: Deploy service to Cloud Run
         uses: stefda/action-cloud-run@v1.0
         with:
